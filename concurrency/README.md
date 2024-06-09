@@ -21,7 +21,7 @@ func main() {
 
 <h4>what the following code is attempting to do?</h4>
 
-This code demonstrates the concept of goroutines and channels in Go for concurrent programming. It creates a pool of worker goroutines (4 in this case) using a for loop. Each goroutine waits for functions to be sent through the buffered channel. Only one function literal (func() { fmt.Println("HERE1") }) is sent to the channel. However, since the channel is buffered, it can hold more functions, and the worker goroutines are still waiting.
+This code demonstrates the concept of goroutines and channels in Go for concurrent programming. It creates a pool of worker goroutines (4 in this case) using a for loop. Each goroutine waits for functions to be sent through the buffered channel. Only one function literal (`func() { fmt.Println("HERE1") }`) is sent to the channel. However, since the channel is buffered, it can hold more functions, and the worker goroutines are still waiting.
 
 <h4>What is the significance of the for loop with 4 iterations?</h4>
 
@@ -42,7 +42,7 @@ Possible solutions for "HERE1" to be printed are:
 1. Use of unbuffered channel.
 2. Introduction of a delay or synchronization mechanism, such as a wait group or a sleep statement.
 
-<h4>Giving use-cases of what these constructs could be used for</h4>
+<h4>Giving use-cases of what these constructs could be used for.</h4>
 
 1. **Processing large datasets in parallel**: Split the data into smaller chunks and send them as functions to be processed by worker goroutines concurrently.
 
